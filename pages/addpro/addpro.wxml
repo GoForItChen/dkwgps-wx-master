@@ -1,0 +1,31 @@
+<view class="container">
+<view class='header'>
+    <image src='/static/images/left_30px.png' bindtap="back"></image>
+    <text class='nav'>添加设备</text>
+</view>
+<view class="form-box">
+<view class="form-item">
+      <image class="inputBac"  src="/static/images/Inputbox_510px@3x.png" catchtap="clearInput">
+      </image>
+      <image class="iconone" src="/static/images/scanning_blue_30px.png" catchtap="clearInput">
+     </image> 
+     <input class="imei" value="{{IMEI}}" bindinput="bindPasswordInput" placeholder="扫一扫添加或手动输入IMEI编码" />
+      <image class="saomiao" src="/static/images/scanning_btn.png" catchtap="clearInput">
+     </image>
+    </view>
+
+    <view class="form-item">
+      <image class="inputBactwo" id="clear-password"  src="/static/images/Inputbox_510px@3x.png" catchtap="clearInput">
+      </image>
+      <image class="icontwo" src="/static/images/lock_new_30px.png" catchtap="clearInput">
+     </image> 
+     <input class="tname" value="{{tname}}" password bindinput="bindPasswordInput" placeholder="请输入设备名称:可用车牌号" />
+    </view>
+
+    <view class="form-item"> 
+   <image class="buttonImg" id="confirmButton"  bindtap="startReset" src="/static/images/btn_332px_normal@3x.png" >
+   </image>
+<text class='reset-btn' bindtap="startReset">确\t认</text>
+</view>
+  </view>
+</view>

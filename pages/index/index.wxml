@@ -1,0 +1,161 @@
+<!-- bindtouchend='touchend' bindtouchstart='touchstart' -->
+<view class="page">
+  <!-- 侧滑栏 -->
+  <view class="page_tab" style="width: {{ui.menuWidth}}px">
+    <view class='drawer-header-bg'>
+      <image src='{{useravr}}'></image>
+      <text>{{usernike}}</text>
+    </view>
+    <view class='drawer-content'>
+      <navigator url='../left/rechargerecord/rechargerecord'>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/Recharge1_48px.png'></image>
+            <text>充值记录</text>
+          </view>
+          <view class='row-right'>
+            <image src='../../static/images/right_30px.png'></image>
+          </view>
+        </view>
+      </navigator>
+      <navigator url='../left/fuli/fulicenter'>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/work_48px.png'></image>
+            <text>福利中心</text>
+          </view>
+          <view class='row-right'>
+            <image src='../../static/images/right_30px.png'></image>
+          </view>
+        </view>
+      </navigator>
+      <navigator url='../left/changepwd/changepwd'>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/lockopened_48px.png'></image>
+            <text>修改密码</text>
+          </view>
+          <view class='row-right'>
+            <image src='../../static/images/right_30px.png'></image>
+          </view>
+        </view>
+      </navigator>
+      <view class='content-row' bindtap='appfx'>
+        <view class='row-detail'>
+          <image src='../../static/images/share_48px.png'></image>
+          <text>app分享</text>
+        </view>
+        <view class='row-right'>
+          <image src='{{fximage}}'></image>
+        </view>
+      </view>
+      <view class='content-row' style='padding-left:64rpx;padding-right:64rpx;display:{{fxIsOpen}}'>
+        <view class='fx-image'>
+          <image src='../../static/images/qq_48px.png'></image>
+          <image src='../../static/images/wechat_48px.png'></image>
+          <image src='../../static/images/friends_48px.png'></image>
+          <image src='../../static/images/blog_48px.png'></image>
+        </view>
+
+      </view>
+      <button class='btn-switch-user'>
+        <image src='../../static/images/changeuser_48px.png'></image>
+        <text>切换用户</text>
+      </button>
+    </view>
+
+  </view>
+  <!-- <view class="bg" bindtap='hideview' style='display:{{display}}'></view> -->
+  <!-- 主页 -->
+  <view class="home {{!ui.tStart? 'withAnimate': ''}}" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px" bindtap="handlerPageTap">
+    <!-- <view class='header'>
+
+      <text class='nav'>伴车星</text>
+    </view> -->
+    <view class='page-row-header'>
+      <image class='icon_user' catchtap='handlerAvatarTap' src="../../static/images/per_whight_30px.png"></image>
+      <view class='ter_name'>
+        <text class='terName' style='color:#ffffff;font-size:30rpx;'> {{terInfo.tname}}</text>
+      </view>
+      <image class='icon_user' bindtap='' src="../../static/images/scanning_whight_30px.png"></image>
+
+    </view>
+
+    <view class='mapcontrainer'>
+
+<!-- style='display:{{display}}' -->
+      <map id="myMap" longitude="{{centerX}}" latitude="{{centerY}}"scale="{{scal}}" style="width: 100%; height:{{scrollHeight}}px;" markers="{{markers}}" bindmarkertap="markertap" include-points="{{include}}"  show-location>
+      
+        <!-- <cover-view>
+        </cover-view> -->
+        <cover-view class='contrainer-message'>
+          <cover-image class='news_btn' src='../../static/images/news_btn.png' catchtap='nav_infomation'></cover-image>
+          <!-- <view class='kong'></view> -->
+          
+        </cover-view>
+        <cover-view class='mapswitch'>
+          <cover-image class='mapswitch_btn' src='../../static/images/mapswitch_btn.png'></cover-image>
+        </cover-view>
+        <cover-view class='middel_btn'>
+          <cover-image class='one' src='../../static/images/Setup_btn.png' bindtap="terminalset"></cover-image>
+          <cover-image class='one' src='../../static/images/details_btn.png'></cover-image>
+          <cover-image class='one' src='../../static/images/Navigation_btn.png'></cover-image>
+          <cover-image class='one' src='../../static/images/more_btn.png'></cover-image>
+        </cover-view>
+
+
+        <cover-view style='clear:both'></cover-view>
+        <cover-view class='shrik_btn'>
+          <cover-image class='one' src='../../static/images/narrow2_btn.png' bindtap='incloude' ></cover-image>
+          <cover-image class='one' src='../../static/images/narrow&enlarge_add_btn.png' style='margin-top:20rpx' bindtap='upScal'></cover-image>
+          <cover-image class='one' src='../../static/images/narrow&enlarge_reduce_btn.png' bindtap='downScal'></cover-image>
+
+        </cover-view>
+        <cover-view style='clear:both'></cover-view>
+        <cover-view class='location-now'>
+          <cover-image class='one' src='../../static/images/eyes_btn.png'></cover-image>
+          <cover-image class='one' src='../../static/images/location1_btn.png' bindtap='localtion' ></cover-image>
+        </cover-view>
+
+        <cover-view class='ter-list'>
+          <cover-image class='one' src='../../static/images/carchoose_btn.png' bindtap='openTerList'></cover-image>
+
+        </cover-view>
+
+        <cover-view class='infomation'>
+          <cover-view class='left'>
+            <cover-view class='info-row'>
+              <cover-view class='status'>
+                <cover-image src='../../static/images/Informationhints_30px.png' class='info-image'></cover-image>
+                <cover-view class='view-text'>{{terInfo.carstate}}</cover-view>
+              </cover-view>
+              <cover-view class='voil'>
+                <cover-image src='../../static/images/power_30px.png' class='info-image'></cover-image>
+               <cover-view class='view-text'>电量 {{terInfo.vol}}%</cover-view>
+              </cover-view>
+            </cover-view>
+            <cover-view class='info-row'>
+              <cover-image src='../../static/images/time_green_30px.png' class='info-image'></cover-image>
+              <cover-view class='view-text'>定位时间：{{terInfo.gpstime}}(卫星定位)</cover-view>
+            </cover-view>
+            <cover-view class='info-row'>
+              <cover-image src='../../static/images/time_green_30px.png' class='info-image'></cover-image>
+              <cover-view class='view-address'>{{address}}</cover-view>
+              
+            </cover-view>
+          </cover-view>
+          <cover-view class='right'>
+            <cover-image src='../../static/images/playback_66px.png' catchtap='openHistory'></cover-image>
+          </cover-view>
+
+
+        </cover-view>
+        <cover-view class="bg2" bindtap='hideview'style='display:{{display}}' ></cover-view>
+      </map>
+    </view>
+
+
+
+
+  </view>
+</view>

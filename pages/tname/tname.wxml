@@ -1,0 +1,572 @@
+<view class="container">
+        <view class='content-row' id="index_0" bindtap="powerDrawer" data-statu="open">
+          <view class='row-detail'>
+            <image src='../../static/images/phonenum_48px.png' id="leftone_0" bindtap="powerDrawer" data-statu="open"></image>
+            <text style="color:#666666;font-size:28rpx;" id="lefttwo_0" bindtap="powerDrawer" data-statu="open">车主号码</text>
+          </view>
+          <view class='row-right' >
+            <text style="color:#999999;font-size:22rpx;margin-right:30rpx;" id="rightone_0" bindtap="powerDrawer" data-statu="open">{{bindtel}}</text>
+            <image src='../../static/images/right_30px.png' id="righttwo_0" bindtap="powerDrawer" data-statu="open"></image>
+          </view>
+        </view>
+        <view class='content-row' id="index_1" bindtap="powerDrawer" data-statu="open">
+          <view class='row-detail'>
+            <image src='../../static/images/shock_48px.png' id="leftone_1" bindtap="powerDrawer" data-statu="open"></image>
+            <text style="color:#666666;font-size:28rpx;" id="lefttwo_1" bindtap="powerDrawer" data-statu="open">震动报警</text>
+          </view>
+          <view class='row-right' wx:for="{{modelIsOpen}}" wx:if="{{item.sel==true}}">
+          <text style="color:#999999;font-size:22rpx;margin-right:30rpx;" id="rightone_1" bindtap="powerDrawer" data-statu="open">{{item.name}}</text>
+            <image src='../../static/images/right_30px.png' id="righttwo_1" bindtap="powerDrawer" data-statu="open"></image>
+          </view>
+        </view>
+        <view class='content-row' id="index_2" bindtap="powerDrawer" data-statu="open">
+          <view class='row-detail'>
+            <image src='../../static/images/work_48px.png' id="leftone_2" bindtap="powerDrawer" data-statu="open"></image>
+            <text style="color:#666666;font-size:28rpx;" id="lefttwo_2" bindtap="powerDrawer" data-statu="open">工作模式</text>
+          </view>
+          <view class='row-right'>
+          <text style="color:#999999;font-size:22rpx;margin-right:30rpx;" id="rightone_2" bindtap="powerDrawer" data-statu="open">潜伏模式</text>
+            <image src='../../static/images/right_30px.png' id="rightone_2" bindtap="powerDrawer" data-statu="open"></image>
+          </view>
+        </view>
+        <view class='content-row' id="index_3" bindtap="powerDrawer" data-statu="open">
+          <view class='row-detail'>
+            <image src='../../static/images/Monitor_48px.png' id="leftone_3" bindtap="powerDrawer" data-statu="open"></image>
+            <text style="color:#666666;font-size:28rpx;" id="lefttwo_3" bindtap="powerDrawer" data-statu="open">监听模式</text>
+          </view>
+          <view class='row-right'>
+          <text style="color:#999999;font-size:22rpx;margin-right:30rpx;" id="rightone_3" bindtap="powerDrawer" data-statu="open">任意号码监听</text>
+            <image src='../../static/images/right_30px.png' id="righttwo_3" bindtap="powerDrawer" data-statu="open"></image>
+          </view>
+        </view>
+ <navigator url='../audio/audio'>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/Soundrecording_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;">实时录音</text>
+          </view>
+          <view class='row-right'>
+            <image src='../../static/images/right_30px.png'></image>
+          </view>
+        </view>
+</navigator>  
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/Speeding_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;" id="index_4" bindtap="powerDrawer" data-statu="open">超速报警\r\n<text style="color:#999999;font-size:22rpx;">超速报警,</text><text style="color:#48a6fe;font-size:22rpx;">重新设置</text></text>
+          </view>
+          <view class='row-right'>
+            <switch color="#48a6fe" checked bindchange="switch1Change"/>
+          </view>
+        </view>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/Enclosure_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">围栏报警\r\n<text style="color:#999999;font-size:22rpx;">围栏报警,</text><text style="color:#48a6fe;font-size:22rpx;">重新设置</text></text>
+          </view>
+          <view class='row-right'>
+            <switch color="#48a6fe" checked bindchange="switch1Change"/>
+          </view>
+        </view>
+     <navigator url='../areaset/areaset'>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/area_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">区域报警\r\n<text style="color:#999999;font-size:22rpx;">当前区域-北京,</text><text style="color:#48a6fe;font-size:22rpx;">重新设置</text></text>
+          </view>
+          <view class='row-right'>
+            <switch color="#48a6fe" checked bindchange="switch1Change"/>
+          </view>
+        </view>
+        </navigator>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/light_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;">灯光设置</text>
+          </view>
+          <view class='row-right'>
+            <switch color="#48a6fe" checked bindchange="switch4Change"/>
+          </view>
+        </view>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/drive_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;">行驶提醒</text>
+            <image src='../../static/images/help_30px.png' style="width: 28rpx;height: 28rpx;margin-left:10rpx;" id="index_5" bindtap="powerDrawer" data-statu="open"></image>
+          </view>
+          <view class='row-right'>
+            <switch color="#48a6fe" checked bindchange="switch1Change"/>
+          </view>
+        </view>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/nopower_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;">断电报警</text>
+          </view>
+          <view class='row-right'>
+             <switch color="#48a6fe"  checked bindchange="switch1Change"/>
+          </view>
+        </view>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/oil_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;">远程断油</text>
+          </view>
+          <view class='row-right'>
+            <switch color="#48a6fe" id="switch6Change_6" checked bindchange="switch6Change" data-statu="open"/>
+          </view>
+        </view>
+        <view class="grey">
+        </view>
+    <view class='content-row' bindtap='appfx'>
+        <view class='row-detail'>
+          <image src='../../static/images/share_48px.png'></image>
+          <text style="font-size:30rpx;color:#666666;">报警通知设置</text>
+        </view>
+        <view class='row-right'>
+          <image src='{{fximage}}'></image>
+        </view>
+      </view>
+      <view style='display:{{fxIsOpen}}'>
+      <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/app_blue_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">App报警通知\r\n<text style="color:#999999;font-size:22rpx;">通过App推送报警通知</text></text>
+          </view>
+          <view class='row-right'>
+          <text style="color:#48a6fe;font-size:22rpx;margin-right:30rpx;">报警通知测试</text>
+            <switch color="#48a6fe" checked bindchange="switch1Change"/>
+          </view>
+        </view>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/wechat_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">微信报警通知\r\n<text style="color:#999999;font-size:22rpx;">已授权微信接收报警通知</text></text>
+            <image src='../../static/images/help_30px.png' style="width: 28rpx;height: 28rpx;margin-left:-60rpx;margin-top:-30rpx;"></image>
+          </view>
+          <view class='row-right'>
+          <text style="color:#48a6fe;font-size:22rpx;margin-right:30rpx;">报警通知测试</text>
+            <switch color="#48a6fe" checked bindchange="switch1Change"/>
+          </view>
+        </view>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/moblie_blue_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">电话报警通知\r\n<text style="color:#999999;font-size:22rpx;">已授权13712341234接收报警通知</text>\r\n<text style="color:#48a6fe;font-size:22rpx;">修改接听报警电话的手机号码</text></text>
+            <image src='../../static/images/help_30px.png' style="width: 28rpx;height: 28rpx;margin-left:-145rpx;margin-top:-60rpx;"></image>          
+            <text style="color:#48a6fe;font-size:22rpx;margin-left:-15rpx;margin-top:-60rpx;" bindtap="telxieyi">《服务协议》</text>
+          </view>
+          <view class='row-right'>
+          <text style="color:#48a6fe;font-size:22rpx;margin-right:30rpx;">报警通知测试</text>
+            <switch color="#48a6fe" checked bindchange="switch1Change"/>
+          </view>
+        </view>
+        <view class='content-row'>
+          <view class='row-detail'>
+            <image src='../../static/images/message_blue_48px.png'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">短信报警通知\r\n<text style="color:#999999;font-size:22rpx;">已授权13712341234接收报警通知</text>\r\n<text style="color:#48a6fe;font-size:22rpx;">修改接听报警短信的手机号码</text></text>
+            <image src='../../static/images/help_30px.png' style="width: 28rpx;height: 28rpx;margin-left:-145rpx;margin-top:-60rpx;"></image>
+            <text style="color:#48a6fe;font-size:22rpx;margin-left:-15rpx;margin-top:-60rpx;" bindtap="msgxieyi">《服务协议》</text>
+          </view>
+          <view class='row-right'>
+          <text style="color:#48a6fe;font-size:22rpx;margin-right:30rpx;">报警通知测试</text>
+            <switch color="#48a6fe" checked bindchange="switch1Change"/>
+          </view>
+        </view>
+        </view>
+<!--车主号码-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus[0].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus[0].show}}">
+   <image class="close" id="close_0"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">车主号码</view>
+ <view class="drawer_content">
+ <view class="top grid">
+ <image class="inputBac" id="clear-password"  src="/static/images/Inputbox_510px@3x.png" catchtap="clearInput">
+      </image>
+      <input class="input_base input_h30 col-1" name="mobile" bindinput="bindmobileInput" placeholder="请输入接收报警手机号码" value="{{mobile}}"  placeholder-style="left:115rpx; color:#999999;font-size:26rpx;"></input>
+ </view>
+ <view class="form-item"> 
+   <image class="buttonImg" id="confirmButton"  bindtap="bindmobile" src="/static/images/btn_332px_normal@3x.png" >
+   </image>
+<text class='reset-btn' bindtap="bindmobile">确\t认</text>
+</view>
+ </view>
+</view>
+
+<!--震动报警1-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus[1].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus[1].show}}">
+   <image class="close" id="close_1"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">震动报警</view>
+ <view class="line"></view>
+ <view style="margin-top:40rpx;height:400rpx;" class="drawer_content">
+ <view class="top grid">
+ <view class='content-rowtwo' id="police_0" bindtap='police'>
+          <view class='row-detail'>
+            <image src='{{policeIsOpen[0].imgleft}}'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">短信报警\r\n<text style="color:#999999;font-size:22rpx;">卡需开通短信功能</text></text>
+          </view>
+          <view class='row-right'>
+            <image src='{{policeIsOpen[0].imgright}}'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' id="police_1" bindtap='police'>
+          <view class='row-detail'>
+            <image src='{{policeIsOpen[1].imgleft}}'></image>
+            <text style="color:#666666;font-size:28rpx;">电话报警\r\n<text style="color:#999999;font-size:22rpx;">卡需开通通话功能</text></text>
+          </view>
+          <view class='row-right'>
+            <image src='{{policeIsOpen[1].imgright}}'></image>
+          </view>
+        </view>
+ </view>
+ <view class="form-item"> 
+   <image class="buttonImg" id="confirmButton_0" src="/static/images/btn_332px_normal@3x.png" bindtap="powerDrawertwo" data-statu="open">
+   </image>
+<text class='reset-btn' id="nextcall_1" bindtap="powerDrawertwo" data-statu="open">确\t认</text>
+</view>
+ </view>
+</view>
+
+<!--震动报警2-->
+<view class="drawer_screen" bindtap="powerDrawertwo" data-statu="close" wx:if="{{showModalStatustwo[1].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatustwo[1].show}}">
+   <image class="close" id="closetwo_1"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">震动报警</view>
+ <view class="line"></view>
+ <view style="margin-top:40rpx;height:400rpx;" class="drawer_content">
+ <view class="top grid">
+ <view class='content-rowtwo' id="policemodel_0" bindtap='selmodel'>
+          <view class='row-detail'>
+            <image src='{{modelIsOpen[0].imgleft}}'></image>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">警戒模式\r\n<text style="color:#999999;font-size:22rpx;">卡需开通短信功能</text></text>
+          </view>
+          <view class='row-right'>
+            <image src='{{modelIsOpen[0].imgright}}'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' id="policemodel_1" bindtap='selmodel'>
+          <view class='row-detail'>
+            <image src='{{modelIsOpen[1].imgleft}}'></image>
+            <text style="color:#666666;font-size:28rpx;">普通模式\r\n<text style="color:#999999;font-size:22rpx;">卡需开通通话功能</text></text>
+          </view>
+          <view class='row-right'>
+            <image src='{{modelIsOpen[1].imgright}}'></image>
+          </view>
+        </view>
+ </view>
+
+ <view class="top grid">
+ <view class='content-rowtwo' id="policemodel_2" bindtap='selmodel'>
+          <view class='row-detail'>
+            <image src='{{modelIsOpen[2].imgleft}}'></image>
+            <text style="color:#666666;font-size:28rpx;">关闭模式\r\n<text style="color:#999999;font-size:22rpx;">卡需开通通话功能</text></text>
+          </view>
+          <view class='row-right'>
+            <image src='{{modelIsOpen[2].imgright}}'></image>
+          </view>
+        </view>
+ </view>
+ </view>
+</view>
+
+<!--选择工作模式1-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus[2].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus[2].show}}">
+   <image class="close" id="close_2"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">选择工作模式</view>
+ <view class="line"></view>
+ <view style="margin-top:40rpx;height:720rpx;" class="drawer_content">
+ <view class="top grid">
+ <view class='content-rowtwo' style="height:100rpx;;padding-top:25rpx;padding-bottom:25rpx;justify-content:center;align-items:center;display:flex;" >
+ <text style="color:#666666;font-size:22rpx;">实时定位模式</text>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' style="height:72rpx;" id="times_0" bindtap='locationtime'>
+          <view class='row-detail'>
+            <text style="color:{{locationtimes[0].color}};font-size:22rpx;" id="left_0" bindtap='locationtime'>实时定位(10s)</text>
+          </view>
+          <view class='row-right'>
+            <image src='{{locationtimes[0].img}}' id="right_0" bindtap='locationtime'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' style="height:72rpx;" id="times_1" bindtap='locationtime'>
+          <view class='row-detail'>
+            <text style="color:{{locationtimes[1].color}};font-size:22rpx;" id="left_1" bindtap='locationtime'>1小时更新一次</text>
+          </view>
+          <view class='row-right' >
+            <image src='{{locationtimes[1].img}}' id="right_1" bindtap='locationtime'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' style="height:72rpx;" id="times_2" bindtap='locationtime'>
+          <view class='row-detail' >
+            <text style="color:{{locationtimes[2].color}};font-size:22rpx;" id="left_2" bindtap='locationtime'>3小时更新一次</text>
+          </view>
+          <view class='row-right' >
+            <image src='{{locationtimes[2].img}}' id="right_2" bindtap='locationtime'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' style="height:72rpx;" id="times_3" bindtap='locationtime'>
+          <view class='row-detail' >
+            <text style="color:{{locationtimes[3].color}};font-size:22rpx;" id="left_3" bindtap='locationtime'>6小时更新一次</text>
+          </view>
+          <view class='row-right' >
+            <image src='{{locationtimes[3].img}}' id="right_3" bindtap='locationtime'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' style="height:72rpx;" id="times_4" bindtap='locationtime'>
+          <view class='row-detail' >
+            <text style="color:{{locationtimes[4].color}};font-size:22rpx;" id="left_4" bindtap='locationtime'>12小时更新一次</text>
+          </view>
+          <view class='row-right' >
+            <image src='{{locationtimes[4].img}}' id="right_4" bindtap='locationtime'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' style="height:72rpx;" id="times_5" bindtap='locationtime'>
+          <view class='row-detail'>
+            <text style="color:{{locationtimes[5].color}};font-size:22rpx;"  id="left_5" bindtap='locationtime'>24小时更新一次</text>
+          </view>
+          <view class='row-right' >
+            <image src='{{locationtimes[5].img}}' id="right_5" bindtap='locationtime'></image>
+          </view>
+        </view>
+ </view>
+ <view class="form-item"> 
+   <image class="buttonImg" id="confirmButton_2"  bindtap="powerDrawertwo" data-statu="open" src="/static/images/btn_332px_normal@3x.png" >
+   </image>
+<text class='reset-btn' id="nextcall_2" bindtap="powerDrawertwo" data-statu="open">确\t认</text>
+</view>
+ </view>
+</view>
+
+<!--选择工作模式2-->
+<view class="drawer_screen" bindtap="powerDrawertwo" data-statu="close" wx:if="{{showModalStatustwo[2].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatustwo[2].show}}">
+   <image class="close" id="close_2"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">选择工作模式</view>
+ <view class="line"></view>
+ <view style="margin-top:40rpx;height:600rpx;" class="drawer_content">
+ <view class="top grid">
+ <view class='content-rowtwo' id="local_0" bindtap='tips'>
+          <view class='row-detail'>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">实时定位模式</text>
+          </view>
+          <view class='row-right'>
+            <image src='{{tipIsOpen[0].img}}'></image>
+          </view>
+        </view>
+ </view>
+ <view style='display:{{tipIsOpen[0].show}}'>
+      <view class='tips'>
+        <text style="color:#999999;font-size:28rpx;line-height:28rpx;">实时定位模式</text>
+        </view>
+        </view>
+ <view class="top grid">
+ <view class='content-rowtwo' id="local_1" bindtap='tips'>
+          <view class='row-detail'>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">点播定位模式</text>
+          </view>
+          <view class='row-right'>
+            <image src='{{tipIsOpen[1].img}}'></image>
+          </view>
+        </view>
+ </view>
+ <view style='display:{{tipIsOpen[1].show}}'>
+      <view class='tips'>
+        <text style="color:#999999;font-size:28rpx;line-height:28rpx;">点播定位模式</text>
+        </view>
+        </view>
+ <view class="top grid">
+ <view class='content-rowtwo' id="local_2" bindtap='tips'>
+          <view class='row-detail'>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">潜伏定位模式</text>
+          </view>
+          <view class='row-right'>
+            <image src='{{tipIsOpen[2].img}}'></image>
+          </view>
+        </view>
+ </view>
+ <view style='display:{{tipIsOpen[2].show}}'>
+      <view class='tips'>
+        <text style="color:#999999;font-size:28rpx;line-height:28rpx;">潜伏定位模式</text>
+        </view>
+        </view>
+ <view class="form-item"> 
+   <image class="buttonImg"  bindtap="workmode"  data-statu="open" src="/static/images/btn_332px_normal@3x.png" >
+   </image>
+<text class='reset-btn' bindtap="workmode" data-statu="open">确\t认</text>
+</view>
+ </view>
+</view>
+
+<!--选择工作模式3-->
+<view class="drawer_screen" bindtap="powerDrawerthree" data-statu="close" wx:if="{{tishi}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{tishi}}">
+   <image class="close" id="closethree_2"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">温馨提示</view>
+ <view style="margin-top:40rpx;height:400rpx;" class="drawer_content">
+ 
+</view>
+</view>
+
+<!--监听模式-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus[3].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus[3].show}}">
+   <image class="close" id="close_3"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">监听模式</view>
+ <view class="line"></view>
+ <view style="margin-top:40rpx;height:580rpx;" class="drawer_content">
+ <view class="top grid">
+        <view class='content-rowtwo' style="height:100%;padding-top:25rpx;padding-bottom:25rpx;justify-content:center;align-items:center;display:flex;">
+            <text style="color:#999999;font-size:22rpx;line-height:22rpx;">提示:监听模式仅在实施模式下有效</text>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' id="listen_0" bindtap='listen'>
+          <view class='row-detail'>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">监听关闭
+            </text>
+          </view>
+          <view class='row-right'>
+               <image src='{{listenIsOpen[0].img}}'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo'  id="listen_1" bindtap='listen'>
+          <view class='row-detail'>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">任意号码监听
+            </text>
+          </view>
+          <view class='row-right'>
+              <image src='{{listenIsOpen[1].img}}'></image>
+          </view>
+        </view>
+ </view>
+ <view class="top grid">
+ <view class='content-rowtwo' id="listen_2" bindtap='listen'>
+          <view class='row-detail'>
+            <text style="color:#666666;font-size:28rpx;line-height:28rpx;">仅车主号码监听
+            </text>
+          </view>
+          <view class='row-right'>
+                <image src='{{listenIsOpen[2].img}}'></image>
+          </view>
+        </view>
+ </view>
+ <view class="bts">
+<image src="/static/images/btn_332px_whight@3x.png" class="cancel"/>
+<text style="position:relative;left:75rpx;bottom:60rpx;font-size: 30rpx;color:#666666;"bindtap="call">立即拨打监听</text>
+<image src="/static/images/btn_332px_normal@3x.png" class="confirm"/>
+<text style="position:relative;left:430rpx;bottom:180rpx;font-size: 30rpx;color:#ffffff;" bindtap="callconfirm">确\t认</text>
+</view>
+ </view>
+</view>
+
+<!--超速设置-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus[4].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus[4].show}}">
+   <image class="close" id="close_4"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">超速设置</view>
+ <view class="drawer_content">
+ <view class="top grid">
+ <text style=" position:relative;top:55rpx;left:60rpx;font-size:26rpx;color:#666666;">超速值</text>
+ <image class="long" id="clear-password"  src="/static/images/Inputbox_510px@3x.png" catchtap="clearInput">
+      </image>
+      <input class="col-2" name="mobile" bindinput="bindoldPasswordInput" placeholder="报警值不能低于20km/h"  placeholder-style="left:25rpx; color:#999999;font-size:26rpx;"></input>
+      <text style=" position:relative;top:55rpx;left:20rpx;font-size:26rpx;color:#666666;">km/h</text>
+ </view>
+ <view class="form-item"> 
+   <image class="buttonImg" id="confirmButton"  bindtap="startReset" src="/static/images/btn_332px_normal@3x.png" >
+   </image>
+<text class='reset-btn' bindtap="startReset">确\t认</text>
+</view>
+ </view>
+</view>
+
+<!--行驶提醒-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus[5].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus[5].show}}">
+   <image class="close" id="close_5"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title" style="font: MicrosoftYaHei;">温馨提示</view>
+ <view class="drawer_content">
+ <text style="justify-content:center;align-items: center; position:relative;top:40rpx;display:flex;font-size:26rpx;color:#666666;">超速值</text>
+ <view class="form-item" style="margin-top:60rpx;"> 
+   <image class="buttonImg" id="confirmButton"  bindtap="startReset" src="/static/images/btn_332px_normal@3x.png" >
+   </image>
+<text class='reset-btn' id='isread_5' bindtap="isread">确\t认</text>
+</view>
+ </view>
+</view>
+
+<!--断油提示-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus[6].show}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus[6].show}}">
+   <image class="close" id="close_6"  src="/static/images/close_gray_30px.png" bindtap="close"/>
+ <!--drawer content-->
+ <view class="drawer_title">提示</view>
+ <view class="line"></view>
+ <view style="margin-top:40rpx;height:400rpx;" class="drawer_content">
+ <view class="top grid">
+ <view class='content-rowtwo' style="height:72rpx;margin-left:auto;display:flex;justify-content:center;align-items: center; ">
+            <text style="font:MicrosoftYaHei;position:relative;font-size:22rpx;color:#999999;">你确定要停止对车的供油么?</text>
+        </view>
+ </view>
+ <view class="top grid">
+ <text style=" position:relative;top:55rpx;left:60rpx;font-size:26rpx;color:#666666;">密码</text>
+ <image class="long" style="width:435rpx; margin-left:133rpx;" id="clear-password"  src="/static/images/Inputbox_510px@3x.png" catchtap="clearInput">
+      </image>
+      <input class="col-2" style="width:433rpx;" name="mobile" bindinput="bindoldPasswordInput" placeholder="请输入登陆密码"  placeholder-style="left:125rpx; color:#999999;font-size:26rpx;"></input>
+ </view>
+ <view class="form-item"> 
+   <image class="buttonImg" style="height:72rpx;width:570rpx;" id="confirmButton"  bindtap="startReset" src="/static/images/btn_332px_normal@3x.png" >
+   </image>
+<text class='reset-btn' style="margin-top:75rpx;" bindtap="startReset">确\t认</text>
+</view>
+ </view>
+</view>
+</view>

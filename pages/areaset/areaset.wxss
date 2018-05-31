@@ -1,0 +1,294 @@
+.container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 0 40rpx;
+    margin-top: 72rpx;
+    background: #fff;
+}
+
+.form-item{
+  display: flex;
+  height:100%;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+
+.content-row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.content-rowtwo{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100rpx;
+  background: #FAFAFA;
+  margin-bottom: 2rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.row-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.row-detail image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}
+
+.row-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-right image{
+  width: 30rpx;
+  height:30rpx;
+}
+  
+/*mask*/
+.drawer_screen {
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 1000;
+ background: #000;
+ opacity: 0.5;
+ overflow: hidden;
+}
+  
+/*content*/
+.drawer_box {
+ width: 630rpx;
+ overflow: hidden;
+ position: fixed;
+ top: 50%;
+ left: 0;
+ z-index: 1001;
+ background: #FAFAFA;
+ margin: -150px 60rpx 0 60rpx;
+ border-radius: 3px;
+}
+  
+.drawer_title{
+ margin-top:70rpx;
+ font-size:34rpx;
+ text-align: center;
+ color:#48A6FE;
+}
+.drawer_content {
+ height: 300rpx;
+}
+  
+.btn_ok{
+ padding: 10px;
+ font: 20px "microsoft yahei";
+ text-align: center;
+ border-top: 1px solid #E8E8EA;
+ color: #3CC51F;
+}
+  
+.top{
+ padding-top:0px;
+}
+.bottom {
+ padding-bottom:0px;
+}
+.title {
+ height: 30px;
+ line-height: 30px;
+ width: 160rpx;
+ text-align: center;
+ display: inline-block;
+ font: 300 28rpx/30px "microsoft yahei";
+}
+  
+.input_base {
+ border: 0rpx solid #ccc;
+ padding-left: 10rpx;
+ margin-right: 62rpx;
+}
+.input_h30{
+ height: 30px;
+ line-height: 30px;
+}
+.input_h60{
+ height: 60px;
+}
+.input_view{
+ font: 12px "microsoft yahei";
+ background: #fff;
+ color:#000;
+ line-height: 30px;
+}
+  
+input {
+ font: 12px "microsoft yahei";
+ background: #f1f1f1;
+ color:#000 ;
+}
+radio{
+ margin-right: 20px;
+}
+.grid { display: -webkit-box; display: box; }
+.col-0 {-webkit-box-flex:0;box-flex:0;}
+.col-1 {-webkit-box-flex:1;
+    box-flex:1;
+    margin-left:60rpx;
+    margin-top:42rpx;
+    height:57rpx; 
+    z-index: 2;  
+    display: block;
+    width: 500rpx;
+    font-size: 26rpx;
+    color: #666666;
+    }
+.col-2 {
+    margin-left:80rpx;
+    margin-top:41rpx;
+    height:66rpx; 
+    z-index: 2;  
+    display: block;
+    width: 328rpx;
+    font-size: 26rpx;
+    color: #666666;
+    border: 0rpx solid #ccc;
+    padding-left: 10rpx;
+    }
+.fl { float: left;}
+.fr { float: right;}
+
+.grid .inputBac{
+    position:absolute;
+    margin-top: 40rpx;
+    margin-left:60rpx;
+    z-index: 1;
+    display: block;
+    height: 60rpx;
+    width:510rpx;
+    margin-right:60rpx;
+}
+
+.infoText{
+    margin-top: 20rpx;
+    text-align: center;
+    width: 100%;
+    justify-content: center; 
+}
+
+picker-view{
+  background-color: white;
+  padding: 0;
+  width: 100%; 
+  height: 380rpx;
+  bottom: 0;
+  position: fixed;
+}
+
+picker-view-column view{
+  vertical-align:middle; 
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------- */
+
+.animation-element-wrapper {
+  display: flex;  
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 95%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.animation-element {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  bottom: 50rpx;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.animation-button {
+  margin-top: 20rpx;
+  top:20rpx;
+  width: 400rpx;
+  height: 100rpx; 
+  line-height: 100rpx; 
+  align-items:center;
+}
+
+.left-bt{
+  left: 30rpx;
+}
+.right-bt {
+  right: 30rpx;
+}
+
+.line{
+  display: block;
+  position: fixed;
+  height: 1rpx;
+  width: 100%;
+  margin-top: 89rpx; 
+  background-color: #eeeeee;
+}
+
+.kongbai{
+  position: absolute;
+  width: 100%;
+  height: 50rpx;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.kongbai .buttonImg{
+    position: absolute;
+    padding-left: 65rpx;
+    height: 32rpx;
+    width: 50rpx;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/history/history",
+    "pages/left/fuli/fulicenter",  
+    "pages/left/rechargerecord/rechargerecord",
+    "pages/left/shaixuan/shaixuan",
+    "pages/left/changepwd/changepwd",
+    "pages/tname/tname",
+    "pages/areaset/areaset",
+    "pages/modelTest/modelTest",
+    "pages/telxieyi/telxieyi",
+    "pages/msgxieyi/msgxieyi",
+    "pages/province/province",
+    "pages/audio/audio",
+    "pages/map/map",
+    "pages/information/information",
+    "pages/terminalList/terminalList",
+    "pages/addterminal/addterminal",
+    "pages/auth/login/login",
+    "pages/auth/register/register",
+    "pages/auth/normalregister/normalregister",
+    "pages/auth/reset/reset",
+    "pages/wealfare/wealfare"  
+  ],
+  "window": {
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#48a6fe",
+    "backgroundColor": "#48a6fe",
+    "backgroundTextStyle": "dark",
+    "navigationStyle": "default"
+  }
+}

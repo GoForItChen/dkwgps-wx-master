@@ -1,0 +1,358 @@
+.container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  height: 128rpx;
+  background:#48A6FE; 
+  align-items: flex-end;
+  padding-left: 30rpx;
+ 
+}
+
+.header image{
+  display: flex;
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 20rpx;
+  margin-bottom: 29rpx;
+}
+
+.header text{
+  color: #ffffff;
+  font-size: 34rpx;
+   margin-bottom: 20rpx;
+}
+
+.form-box{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 0 40rpx;
+    margin-top: 72rpx;
+    background: #fff;
+}
+
+.form-item{
+  display: flex;
+  height:100%;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+
+.content-row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.content-rowtwo{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100rpx;
+  background: #FAFAFA;
+  margin-bottom: 2rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.tips{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 120rpx;
+  background:#e6e6e6;
+  margin-top:-1rpx; 
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.row-detail image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}
+
+.row-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-right image{
+  width: 30rpx;
+  height:30rpx;
+}
+
+.wx-switch-input{
+  width:72rpx !important;
+  height:40rpx !important;
+}
+/*灰色样式（false的样式）*/
+.wx-switch-input::before{
+  width:70rpx !important;
+  height: 36rpx !important;
+}
+/*蓝色色样式（true的样式）*/
+.wx-switch-input::after{
+  width: 30rpx !important;
+  height: 36rpx !important;
+}
+
+.grey{
+  background: #f2f2f2;
+  height:20rpx;
+}
+
+/*button*/
+.btn {
+ width: 80%;
+ padding: 20rpx 0;
+ border-radius: 10rpx;
+ text-align: center;
+ margin: 40rpx 10%;
+ background: #000;
+ color: #fff;
+}
+  
+/*mask*/
+.drawer_screen {
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 1000;
+ background: #000;
+ opacity: 0.5;
+ overflow: hidden;
+}
+  
+/*content*/
+.drawer_box {
+ width: 630rpx;
+ overflow: hidden;
+ position: fixed;
+ top: 50%;
+ left: 0;
+ z-index: 1001;
+ background: #FAFAFA;
+ margin: -150px 60rpx 0 60rpx;
+ border-radius: 3px;
+}
+  
+.drawer_title{
+ margin-top:70rpx;
+ font-size:34rpx;
+ text-align: center;
+ color:#48A6FE;
+}
+.drawer_content {
+ height: 300rpx;
+}
+  
+.btn_ok{
+ padding: 10px;
+ font: 20px "microsoft yahei";
+ text-align: center;
+ border-top: 1px solid #E8E8EA;
+ color: #3CC51F;
+}
+  
+.top{
+ padding-top:0px;
+}
+.bottom {
+ padding-bottom:0px;
+}
+.title {
+ height: 30px;
+ line-height: 30px;
+ width: 160rpx;
+ text-align: center;
+ display: inline-block;
+ font: 300 28rpx/30px "microsoft yahei";
+}
+  
+.input_base {
+ border: 0rpx solid #ccc;
+ padding-left: 10rpx;
+ margin-right: 62rpx;
+}
+.input_h30{
+ height: 30px;
+ line-height: 30px;
+}
+.input_h60{
+ height: 60px;
+}
+.input_view{
+ font: 12px "microsoft yahei";
+ background: #fff;
+ color:#000;
+ line-height: 30px;
+}
+  
+input {
+ font: 12px "microsoft yahei";
+ background: #f1f1f1;
+ color:#000 ;
+}
+radio{
+ margin-right: 20px;
+}
+.grid { display: -webkit-box; display: box; }
+.col-0 {-webkit-box-flex:0;box-flex:0;}
+.col-1 {-webkit-box-flex:1;
+    box-flex:1;
+    margin-left:60rpx;
+    margin-top:42rpx;
+    height:57rpx; 
+    z-index: 2;  
+    display: block;
+    width: 500rpx;
+    font-size: 26rpx;
+    color: #666666;
+    }
+.col-2 {
+    margin-left:80rpx;
+    margin-top:41rpx;
+    height:66rpx; 
+    z-index: 2;  
+    display: block;
+    width: 328rpx;
+    font-size: 26rpx;
+    color: #666666;
+    border: 0rpx solid #ccc;
+    padding-left: 10rpx;
+    }
+.fl { float: left;}
+.fr { float: right;}
+
+.grid .inputBac{
+    position:absolute;
+    margin-top: 40rpx;
+    margin-left:60rpx;
+    z-index: 1;
+    display: block;
+    height: 60rpx;
+    width:510rpx;
+    margin-right:60rpx;
+}
+
+.grid .long{
+    position:absolute;
+    margin-top: 0rpx;
+    margin-left:160rpx;
+    z-index: 1;
+    display: block;
+    height: 70rpx;
+    width:332rpx;
+    margin-right:60rpx;
+}
+
+.form-item .buttonImg{
+    position: absolute;
+    margin-top: 60rpx;
+    left: 30rpx;
+    height: 60rpx;
+    width: 510rpx;
+    color: #ffffff;
+    font-size: 30rpx;
+}
+
+.form-item .reset-btn{
+    position: absolute;
+    margin-top: 70rpx;
+    left: 275rpx;
+    font-size: 30rpx;
+    width: 100%;
+    color: #ffffff;
+    align-items:center;
+    justify-content:center;
+} 
+
+.drawer_box .close{
+  display: flex;
+  flex-direction :row-reverse;
+  position:absolute;
+  right:20rpx;
+  top:20rpx;
+  height:30rpx;
+  width:30rpx;
+}
+
+.line{
+   position:relative; 
+   width:100%;
+   height:1rpx;
+   background:#e6e6e6;
+   top:40rpx;
+}
+
+.bts{
+  background: #ffffff;
+  height:20rpx;
+}
+
+.bts .cancel { 
+  display: block; 
+  height:80rpx;
+  width:270rpx; 
+  position: relative; 
+  overflow: hidden;
+  background: #e6e6e6; 
+  margin-left:30rpx;
+  margin-top:60rpx; 
+  margin-right:30rpx; 
+}
+
+.bts .confirm { 
+  display: block; 
+  height:80rpx;
+  width:270rpx; 
+  position: relative; 
+  overflow: hidden;
+  background: #e6e6e6; 
+  margin-left:330rpx;
+  bottom:120rpx; 
+  margin-right:30rpx;   
+}
+
+.content-rowtwo .yanshi{
+  position: relative;
+  margin-left:83rpx;
+  width:400rpx;
+  height:100rpx;
+}
+
+
+

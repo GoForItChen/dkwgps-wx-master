@@ -1,0 +1,37 @@
+<import src="../../model/model.wxml"/>
+<view class="container">
+<navigator url='../province/province'>
+<view class='content-row' id="povince">
+          <view class='row-detail'>
+            <text style="font: MicrosoftYaHei;color:#666666;font-size:28rpx;">省(市)</text>
+          </view>         
+          <view class='row-right' wx:if="{{cityName!=null}}">
+            <text style="font: MicrosoftYaHei;color:#999999;font-size:22rpx;margin-right:30rpx;">{{cityName}}</text>
+            <image src='../../static/images/right_30px.png'></image>
+          </view>
+          <view class='row-right' wx:if="{{cityName==null}}">
+            <text style="font: MicrosoftYaHei;color:#999999;font-size:22rpx;margin-right:30rpx;">浙江省</text>
+            <image src='../../static/images/right_30px.png'></image>
+          </view>
+        </view>
+        </navigator>
+        <view class='content-row' >
+          <view class='row-detail'>
+            <text style="font: MicrosoftYaHei;color:#666666;font-size:28rpx;">市</text>
+          </view>
+          <view class='row-right' >
+            <text style="font: MicrosoftYaHei;color:#999999;font-size:22rpx;margin-right:30rpx;">宁波</text>
+            <image src='../../static/images/right_30px.png' id="righttwo_0" bindtap="powerDrawer" data-statu="open"></image>
+          </view>
+        </view>
+        <view class='content-row' bindtap="translate">
+          <view class='row-detail'>
+            <text style="font: MicrosoftYaHei;color:#666666;font-size:28rpx;">县(区)</text>
+          </view>
+          <view class='row-right'>
+            <text style="font: MicrosoftYaHei;color:#999999;font-size:22rpx;margin-right:30rpx;" bindtap="translate">鄞州区</text>
+            <image src='../../static/images/right_30px.png'></image>
+          </view>
+        </view>
+</view>
+<template is="areaData" data="{{...item}}"/>

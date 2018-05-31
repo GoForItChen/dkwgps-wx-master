@@ -1,0 +1,86 @@
+<view class="container">
+  <!-- <view class='header'>
+    <image src='/static/images/left_30px.png'></image>
+    <text class='nav'>注册</text>
+  </view>
+   <view class='form-logo'>
+    <image class='logo' src='/static/images/app_blue_48px.png'></image>
+  </view> -->
+
+  <view class='form-box'>
+    <view class='form-item'>
+      <image src='/static/images/user_50px.png' />
+      <input value="{{mobile}}" bindinput="bindMobileInput" placeholder='请输入手机号'></input>
+     
+    </view>
+  </view>
+
+  <view class='view-yzm'>
+    <view class='yzm-item'>
+      <image src='/static/images/user_50px.png' />
+      <input class="code" value="{{code}}" bindinput="bindCodeInput"  placeholder='验证码'></input>
+     </view>
+     <view class='yam-btn'>
+       <button disabled='{{disabled}}' data-id="2" bindtap="sendCode">
+        <text style='color:#ffffff'>{{time}}</text>
+      </button>
+     </view>
+  </view>
+
+   <view class='form-box'>
+    <button class='btn-login' bindtap="enterNext">
+      <text class='btn-text'>下一步</text>
+    </button>
+  </view>
+  <view class='remind'>
+    <view class='remind-username'>
+      <navigator url="/pages/auth/normalregister/normalregister" class="register">
+        <text class='register'  style='color:#999999'>常规注册</text>
+        
+      </navigator>
+
+
+    </view>
+    <view class='remind-center'>
+
+    </view>
+    <view class='remind-pwd'>
+      <navigator url="/pages/auth/login/login" style='color:#999999' class="hasaccount">已有账户</navigator>
+      <!-- <text>忘记密码</text> -->
+
+    </view>
+  </view>
+      
+        <!-- <view class="form-box">>
+    
+  <!-- <view class="form-box">
+
+
+    <view class="form-item">
+      <input class="mobile" value="{{mobile}}" bindinput="bindMobileInput" placeholder="手机号" />
+      <image wx:if="{{ mobile.length > 0 }}" id="clear-mobile" class="clear" src="/static/images/clear_input.png" catchtap="clearInput"></image>
+    </view>
+
+    <view class="form-item-code">
+      <view class="form-item code-item">
+        <input class="code" value="{{code}}" bindinput="bindCodeInput" placeholder="验证码" />
+        <image class="clear" id="clear-code" wx:if="{{ code.length > 0 }}" src="/static/images/clear_input.png" catchtap="clearInput"></image>
+      </view>
+      <button disabled='{{disabled}}' data-id="2" bindtap="sendCode">
+        {{time}}
+      </button>
+
+    </view>
+    <view class="form-item">
+      <input class="password" value="{{password}}" password bindinput="bindPasswordInput" placeholder="密码" />
+      <image class="clear" id="clear-password" wx:if="{{ password.length > 0 }}" src="/static/images/clear_input.png" catchtap="clearInput"></image>
+    </view>
+
+    <view class="form-item">
+      <input class="password" value="{{confirmPassword}}" password bindinput="bindConfirmPasswordInput" placeholder="确认密码" />
+      <image class="clear" id="clear-confirm-password" wx:if="{{ confirmPassword.length > 0 }}" src="/static/images/clear_input.png" catchtap="clearInput"></image>
+    </view>
+    <button type="default" class="register-btn" bindtap="enterNext">注册</button>
+
+  </view> -->
+</view>
